@@ -35,5 +35,4 @@ abstract class Pessoa {
         get => Sexo;
         set => Sexo = value;
     }
-
 }

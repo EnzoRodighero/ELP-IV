@@ -2,10 +2,12 @@ using system;
 class Empresa {
     public string RazaoSocial;
     public string CNPJ;
+    ´public int NumFunc;
 
     public Empresa () {
         RazaoSocial = "";
         CNPJ = "";
+        NumFunc = 0;
     }
     
     public Empresa (string pRazaoSocial, string pCNPJ) {
@@ -27,23 +29,10 @@ class Empresa {
         set => CNPJ = value;
     }
 
-    public virtual float Bruto () {
-
-    } 
-
-    public float Liquido () {
-
+    public int GetSetNumFunc {
+        get => NumFunc;
+        set => NumFunc = value;
     }
 
-    public float Desconto () {
-
-    }
-
-    public float IR () {
-
-    }
-
-    public float PF () {
-
-    }
+    //Processa Folha?
 }

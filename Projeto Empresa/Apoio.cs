@@ -1,21 +1,26 @@
 using system;
 class Apoio: Funcionario {
-    // public float AuxilioEducacao;
 
     public Apoio () {
-        AuxilioEducacao = 0;
-    }
-
-    public Apoio (float pAuxilioEducacao) {
-        AuxilioEducacao = pAuxilioEducacao;
+        
     }
 
     ~Apoio () {
 
     }
 
-    // public float GetSetAuxilioEducacao {
-        // get => AuxilioEducacao;
-        // set => AuxilioEducacao = value;
-    // } 
+    public float FornAuxilioEdu () {
+
+        if (NumDep <= 5) {
+            return (base.NumDep * 60);
+        }
+
+        else {
+            return 300;
+        }
+    }
+
+    public override float FornSalLiq () {
+        return (base.FornSalbruto () + FornAuxilioEdu ());
+    }
 }

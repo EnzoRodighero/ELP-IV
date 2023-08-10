@@ -32,7 +32,11 @@ class Chefe: Funcionario {
         set => AddChefia = value;
     }
 
-    public override float Bruto () {
-
+    public override float FornBruto () {
+        return (base.FornBruto () + AddChefia);
     } 
+
+    public float FornAddChefia () {
+        return AddChefia;
+    }
 }
